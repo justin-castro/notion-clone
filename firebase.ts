@@ -1,21 +1,18 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp, getApps, getApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { initializeApp, getApps, App, getApp, cert } from "firebase-admin/app";
+import { getFirestore } from "firebase-admin/firestore";
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCBrVauk1_wq6SGspUA7dCymh9xB8Yllrg",
-  authDomain: "notion-clone-cbda5.firebaseapp.com",
-  projectId: "notion-clone-cbda5",
-  storageBucket: "notion-clone-cbda5.firebasestorage.app",
-  messagingSenderId: "781075890956",
-  appId: "1:781075890956:web:24339688734e4db3773f29"
+  apiKey: "AIzaSyCBWkdIuET2GoQXo6Q2SexMZcM5Vby5YjA",
+  authDomain: "notion-clone-a1b58.firebaseapp.com",
+  projectId: "notion-clone-a1b58",
+  storageBucket: "notion-clone-a1b58.firebasestorage.app",
+  messagingSenderId: "501107021408",
+  appId: "1:501107021408:web:62b282857ed4e243bf1505",
+  measurementId: "G-QX6PPKBWNM"
 };
 
 // Initialize Firebase
-const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApp()
+const app = getApps.length === 0 ? initializeApp(firebaseConfig) : getApp();
 const db = getFirestore(app);
 
-export { db}
+export { db };
